@@ -1,0 +1,51 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 0,
+    cpu_avg_samples = 1,
+    --default_color = '#FFFFEC',
+    default_color = 'lightgrey',
+    color5 = '#FFDEAD',--NavajoWhite
+    double_buffer = true,
+    draw_borders = false,
+    draw_outline = false, -- amplifies text if yes
+    draw_shades = false,
+    font = 'Ubuntu Mono:normal:size=11',
+    gap_x = 10,
+    gap_y = 627,
+    maximum_width  = 320,
+    minimum_width  = 320,
+    net_avg_samples = 1,
+    no_buffers = true,
+
+    own_window = true,
+    own_window_type = 'dock',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 125,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+    stippled_borders = 2,
+    total_run_times = 0,
+    update_interval = 1.0,
+    uppercase = false, -- set to yes if you want all text to be in uppercase
+    use_spacer = 'right',
+    use_xft = true,
+}
+
+conky.text = [[
+${color5}${font Sans:normal:size=9}NETWORK ${hr 2}$color$font
+#Locale: ${alignr} ${execi 6000 curl ipinfo.io/city}, ${execi 6000 curl ipinfo.io/region}, ${execi 6000 curl ipinfo.io/country}
+#${alignr} ${execi 6000 curl ipinfo.io/loc}
+Local IP: ${alignr} ${if_existing /sys/class/net/wlp3s0/operstate up}${addr wlp3s0}${else}${addr enp0s25}${endif}
+Public IP: ${alignr} ${execi 600 wget http://ipinfo.io/ip -qO -}
+wlp3s0 SSID: ${alignr} ${if_existing /sys/class/net/wlp3s0/operstate up}${color green}${exec iwgetid -r}${else}${color red}DISCONNECTED${endif}$color
+enp0s25: ${alignr} ${if_existing /sys/class/net/enp0s25/operstate up}${color green}CONNECTED${else}${color red}DISCONNECTED${endif}$color
+Ping: ${alignr} ${execi 30 ping www.google.com -c 1 | grep time= | rev | cut -c -6 | rev}
+
+${color red} Down: ${if_existing /sys/class/net/wlp3s0/operstate up}${downspeed wlp3s0}${else}${downspeed enp0s25}${endif} k/s ${alignr}${color green}Up: ${if_existing /sys/class/net/wlp3s0/operstate up}${upspeed wlp3s0}${else}${upspeed enp0s25}${endif} k/s $color
+${if_existing /sys/class/net/wlp3s0/operstate up}${downspeedgraph wlp3s0 25,0 000000 ff0000}${else}${downspeedgraph enp0s25 25,0 000000 ff0000}${endif}
+${if_existing /sys/class/net/wlp3s0/operstate up}${upspeedgraph wlp3s0 25,0 000000 00ff00}${else}${upspeedgraph enp0s25 25,0 000000 00ff00}${endif}
+${color red}TotalDown: ${if_existing /sys/class/net/wlp3s0/operstate up}${totaldown wlp3s0}${else}${totaldown enp0s25}${endif} ${alignr}${color green}TotalUp: ${if_existing /sys/class/net/wlp3s0/operstate up}${totalup wlp3s0}${else}${totalup enp0s25}${endif}$color
+Inbound: ${tcp_portmon 1 32767 count} Outbound: ${tcp_portmon 32768 61000 count}${alignr}Total: ${tcp_portmon 1 65535 count}
+]];

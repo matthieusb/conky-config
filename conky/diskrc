@@ -1,0 +1,40 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 0,
+    --default_color = '#FFFFEC',
+    default_color = 'lightgrey',
+    color5 = '#FFDEAD',--NavajoWhite
+    double_buffer = true,
+    draw_borders = false,
+    draw_outline = false, -- amplifies text if yes
+    draw_shades = false,
+    font = 'Ubuntu Mono:normal:size=11',
+    gap_x = 10,
+    gap_y = 497,
+    maximum_width  = 320,
+    minimum_width  = 320,
+    no_buffers = true,
+
+    own_window = true,
+    own_window_type = 'dock',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 125,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+    stippled_borders = 2,
+    update_interval = 1.0,
+    uppercase = false, -- set to yes if you want all text to be in uppercase
+    use_spacer = 'right',
+    use_xft = true,
+}
+
+conky.text = [[
+${color5}${font Sans:normal:size=9}DISKS + I/O ${hr 2}$color$font
+${font sans-serif:normal:size=8}${color FFFFCC}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
+${font sans-serif:normal:size=8}${color FFFFCC}Read: $alignr $diskio_read
+${diskiograph_read 20,0 -t}
+${font sans-serif:normal:size=8}${color FFFFCC}Write: $alignr $diskio_write
+${diskiograph_write 20,0 -t}
+]];

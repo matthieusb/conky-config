@@ -1,0 +1,100 @@
+                        <div class="feed-controls clearfix">
+  <span class="lt">6 - 10 of 90 days | <a href="http://www.accuweather.com/en/en/bordeaux/131913/month/131913?view=table">All 90 days</a></span>
+  <ul class="g g-nav rt">
+          <li class="first"><a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=1"><span class="arrow-left"></span> Prev 5</a></li>
+          <li class="last"><a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=11">Next 5 <span class="arrow-right"></span></a></li>
+  </ul>
+</div>
+<!-- /.feed-controls -->
+
+<div id="feed-tabs" class="panel-list">
+        <a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=1" class="arrow-left">Previous 5 Days<span></span></a>
+        <a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=11" class="arrow-right">Next 5 Days<span></span></a>
+  <ul>
+    <li class="day current first cl { href: 'http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=6' }" data-href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=6">
+    <div class="bg bg-su">
+        <h3><a href="#">Fri</a></h3>
+            <h4>Mar 3</h4>
+        <div class="icon i-4-l "></div>
+        <div class="info">
+                    <div class="temp ">
+                        <span class="large-temp">18&deg;</span>
+                        <span class="small-temp">/6&deg;C</span>
+                    </div>
+                <span class="cond">Sun through high clouds</span>
+        </div>
+        <!-- /.info -->
+    </div>
+    <!-- /.bg -->
+    </li>
+    <li class="day hv  cl { href: 'http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=7' }" data-href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=7">
+    <div class="bg bg-su">
+        <h3><a href="#">Sat</a></h3>
+            <h4>Mar 4</h4>
+        <div class="icon i-3-m "></div>
+        <div class="info">
+                    <div class="temp ">
+                        <span class="large-temp">13&deg;</span>
+                        <span class="small-temp">/6&deg;</span>
+                    </div>
+                <span class="cond">Cooler with a shower in spots</span>
+        </div>
+        <!-- /.info -->
+                <a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=7" class="bt-more">More</a>
+    </div>
+    <!-- /.bg -->
+    </li>
+    <li class="day hv  cl { href: 'http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=8' }" data-href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=8">
+    <div class="bg bg-c">
+        <h3><a href="#">Sun</a></h3>
+            <h4>Mar 5</h4>
+        <div class="icon i-12-m "></div>
+        <div class="info">
+                    <div class="temp ">
+                        <span class="large-temp">14&deg;</span>
+                        <span class="small-temp">/5&deg;</span>
+                    </div>
+                <span class="cond">A little afternoon rain</span>
+        </div>
+        <!-- /.info -->
+                <a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=8" class="bt-more">More</a>
+    </div>
+    <!-- /.bg -->
+    </li>
+    <li class="day hv  cl { href: 'http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=9' }" data-href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=9">
+    <div class="bg bg-c">
+        <h3><a href="#">Mon</a></h3>
+            <h4>Mar 6</h4>
+        <div class="icon i-12-m "></div>
+        <div class="info">
+                    <div class="temp ">
+                        <span class="large-temp">14&deg;</span>
+                        <span class="small-temp">/7&deg;</span>
+                    </div>
+                <span class="cond">Cloudy with a little rain</span>
+        </div>
+        <!-- /.info -->
+                <a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=9" class="bt-more">More</a>
+    </div>
+    <!-- /.bg -->
+    </li>
+    <li class="day hv last cl { href: 'http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=10' }" data-href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=10">
+    <div class="bg bg-c">
+        <h3><a href="#">Tue</a></h3>
+            <h4>Mar 7</h4>
+        <div class="icon i-12-m "></div>
+        <div class="info">
+                    <div class="temp ">
+                        <span class="large-temp">15&deg;</span>
+                        <span class="small-temp">/8&deg;</span>
+                    </div>
+                <span class="cond">Mostly cloudy, a little rain</span>
+        </div>
+        <!-- /.info -->
+                <a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913?day=10" class="bt-more">More</a>
+    </div>
+    <!-- /.bg -->
+    </li>
+  </ul>
+</div>
+<!-- /.feed-tabs -->

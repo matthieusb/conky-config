@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Conky
+GenericName=Conky
+Comment=Start conky
+Categories=Utility;System;
+Exec=/home/msb/.conky/start.sh
+X-GNOME-Autostart-enabled=true
+Terminal=false
+StartupNotify=true
+Type=Application

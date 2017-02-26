@@ -1,0 +1,87 @@
+                    <li class="first current { target: '#detail-now' }"><a href="http://www.accuweather.com/en/en/bordeaux/131913/current-weather/131913" class=""><span>Now</span></a>
+                    </li>
+                    <li class="{ target: '#detail-day-night' }"><a href="http://www.accuweather.com/en/en/bordeaux/131913/daily-weather-forecast/131913"><span>Daily</span></a></li>
+                    <li class="last { target: '#detail-hourly' }"><a href="http://www.accuweather.com/en/en/bordeaux/131913/hourly-weather-forecast/131913"><span>Hourly</span></a></li>
+                    <li class="{ target: '#detail-morning' }"><a href="http://www.accuweather.com/en/en/bordeaux/131913/morning-weather-forecast/131913"><span>Morning</span></a></li>
+                    <li class="{ target: '#detail-afternoon' }"><a href="http://www.accuweather.com/en/en/bordeaux/131913/afternoon-weather-forecast/131913"><span>Afternoon</span></a></li>
+                    <li class="{ target: '#detail-evening' }"><a href="http://www.accuweather.com/en/en/bordeaux/131913/evening-weather-forecast/131913"><span>Evening</span></a></li>
+                    <li class="last { target: '#detail-overnight' }"><a href="http://www.accuweather.com/en/en/bordeaux/131913/overnight-weather-forecast/131913"><span>Overnight</span></a></li>                      
+                  </ul>
+                  <!-- /#detail-tab-buttons.detail-tab-buttons -->
+                  <div id="detail-now" class="detail-tab-panel day">
+                    <div class="bg bg-c">
+                      <div class="forecast">
+                        <div class="icon i-7-xl"></div>
+                        <div class="info"> 
+                            <div class="temp">
+                                <span class="large-temp">13&deg;</span>
+                                <span class="small-temp"><em>RealFeel&#174;</em> 12&deg;</span>
+                            </div>
+                            <span class="cond">Cloudy</span>
+                        </div>
+                        <!-- /.info -->
+                      </div>
+                      <!-- /.forecast -->
+                      <div class="more-info"> 
+                        
+                        
+<div class="wind-box-lg">
+    <div class="wind-point WSW"></div>
+    <div class="wind-compass"></div>
+</div>                                                 
+                                            
+                        <ul class="stats">
+                          <li class="wind"><strong>18 km/h</strong></li>
+                          <li>Humidity: <strong>76%</strong></li>
+                          <li>Pressure: <strong>1021.00 mb </strong></li>
+                          <li>UV Index: <strong>1</strong></li>
+                          <li>Cloud Cover: <strong>100%</strong></li>
+                          <li>Ceiling: <strong>549 m</strong></li>
+                          <li>Dew Point: <strong>9&#176;&nbsp;C</strong></li>
+                          <li>Visibility: <strong>16 km</strong></li>
+                        </ul>
+                        <!-- /.stats -->
+                      </div>
+                      <!-- /.more-info -->
+                                             
+                    </div>
+                    <!-- /.bg -->
+                  </div>
+                  <!-- /.detail-tab-panel --> 
+                </div>
+                <!-- /#details -->
+
+                <div class="rise-modules">
+    <div class="row">
+        <div id="feature-sun" class="feature feature-first">
+            <div class="inner">
+                <div class="feature-title">
+                    <h3 class="lt">Sunrise/Sunset</h3>
+                </div>
+                <!-- /.feature-title -->
+
+                <ul class="time-period">
+                    <li>Sunrise: <span>7:46 AM</span></li>
+                    <li>Sunset: <span>6:45 PM</span></li>
+                    <li class="duration">Duration: <span>10:59 hr</span></li>
+                </ul>
+                <div class="icon i-1-m"></div>
+                <!-- /.content -->
+            </div>
+        </div>
+        <!-- /.feature -->
+
+        <div id="feature-moon" class="feature">
+            <div class="inner">
+                <div class="feature-title">
+                    <h3 class="lt">Moonrise/Moonset</h3>
+                </div>
+                <!-- /.feature-title -->
+
+                <ul class="time-period">
+                    <li>Moonrise: <span>7:41 AM</span></li>
+                    <li>Moonset: <span>6:47 PM</span></li>
+                    <li class="duration">Duration: <span>11:06 hr</span></li>
+                </ul>
+                <div class="icon i-33-m"></div>
+                <a href="http://www.accuweather.com/en/fr/bordeaux/131913/astronomy-weather/131913" class="more rt">Astronomy <span class="arrow"></span></a>

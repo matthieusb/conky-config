@@ -1,0 +1,79 @@
+conky.config = {
+    alignment = 'top_left',
+    background = false,
+    border_width = 0,
+    default_color = '#FFFFEC',
+    color1 = '#FFDEAD',--NavajoWhite
+    color2 = '2DF76A',
+    color5 = '#FFDEAD',--NavajoWhite
+    double_buffer = true,
+    draw_borders = false,
+    draw_outline = false, -- amplifies text if yes
+    draw_shades = false,
+    font = 'Ubuntu Mono:normal:size=11',
+    gap_x = 10,
+    gap_y = 380,
+    max_text_width = 512,
+    maximum_width  = 310,
+    minimum_width  = 310,
+    maximum_height = 100,
+    minimum_height = 110,
+    no_buffers = true,
+
+    own_window = true,
+    own_window_type = 'dock',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 125,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+    stippled_borders = 2,
+    text_buffer_size = 512,
+    update_interval = 1.0,
+    uppercase = false, -- set to yes if you want all text to be in uppercase
+    use_spacer = 'right',
+    use_xft = true,
+
+    draw_shades = true,
+    draw_outline = true,-- amplifies text if yes
+	draw_borders = false,
+	font = 'Arial:size=9',
+    color5 = '#FFDEAD',--NavajoWhite
+	uppercase = false,-- set to yes if you want all text to be in uppercase
+};
+
+conky.text = [[
+${color5}${font Sans:normal:size=9}WEATHER ${hr 2}$color${texeci 500 bash $HOME/Programs/conky/1_accuweather/1_accuweather -f2016}${font}
+${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_0.png -p 0,25 -s 150x150}${font Arial:size=11}${goto 170}${execpi 600 sed -n '4p' $HOME/Programs/conky/1_accuweather/curr_cond|cut -c1-20}
+${goto 170}${execpi 600 sed -n '4p' $HOME/Programs/conky/1_accuweather/curr_cond|cut -c21-40}
+${font Arial:size=22}${goto 170}${execpi 600 sed -n '2p' $HOME/Programs/conky/1_accuweather/curr_cond}° (${execpi 600 sed -n '3p' $HOME/Programs/conky/1_accuweather/curr_cond}°)${font}${image $HOME/Programs/conky/1_accuweather/forecast_2016/wind_0.png -p 180,90 -s 70x70}
+
+
+${goto 270}${execpi 600 sed -n '6p' $HOME/Programs/conky/1_accuweather/curr_cond|awk '{print $1}'}
+${goto 270}${execpi 600 sed -n '6p' $HOME/Programs/conky/1_accuweather/curr_cond|awk '{print $2}'}
+
+
+
+${color5}HUMIDITY: $color${execpi 600 sed -n '7p' $HOME/Programs/conky/1_accuweather/curr_cond}${goto 170}${color5}PRESSURE: $color${alignr}${execpi 600 sed -n '8p' $HOME/Programs/conky/1_accuweather/curr_cond} 
+${color5}UV INDEX: $color${execpi 600 sed -n '9p' $HOME/Programs/conky/1_accuweather/curr_cond} ${goto 170}${color5}CLOUD COVER: $color${alignr}${execpi 600 sed -n '10p' $HOME/Programs/conky/1_accuweather/curr_cond} 
+${color5}DEW POINT: $color${execpi 600 sed -n '12p' $HOME/Programs/conky/1_accuweather/curr_cond}°${goto 170}${color5}VISIBILITY: $color${alignr}${execpi 600 sed -n '13p' $HOME/Programs/conky/1_accuweather/curr_cond}
+${color5}SUN R/S: $color${execpi 600 sed -n '23p' $HOME/Programs/conky/1_accuweather/curr_cond}/${execpi 600 sed -n '24p' $HOME/Programs/conky/1_accuweather/curr_cond}${goto 170}${color5}MOON R/S: ${alignr}$color${execpi 600 sed -n '25p' $HOME/Programs/conky/1_accuweather/curr_cond}/${execpi 600 sed -n '26p' $HOME/Programs/conky/1_accuweather/curr_cond}
+${color5}SUN DURAT.: $color${execpi 600 sed -n '16p' $HOME/Programs/conky/1_accuweather/curr_cond}${goto 170}${color5}MOON DURAT.: $color${alignr}${execpi 600 sed -n '20p' $HOME/Programs/conky/1_accuweather/curr_cond}
+${hr 1}
+${goto 25}${font Arial:size=10}${color5}${execpi 600 sed -n '1p' $HOME/Programs/conky/1_accuweather/first_days}${goto 125}${execpi 600 sed -n '6p' $HOME/Programs/conky/1_accuweather/first_days}${goto 225}${execpi 600 sed -n '11p' $HOME/Programs/conky/1_accuweather/first_days}$color${font}${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_1.png -p 0,280 -s 65x65}${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_2.png -p 100,280 -s 65x65}${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_3.png -p 200,280 -s 65x65}
+
+${goto 85}${execpi 600 sed -n '3p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 185}${execpi 600 sed -n '8p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 285}${execpi 600 sed -n '13p' $HOME/Programs/conky/1_accuweather/first_days}°
+${goto 85}/${execpi 600 sed -n '4p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 185}/${execpi 600 sed -n '9p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 285}/${execpi 600 sed -n '14p' $HOME/Programs/conky/1_accuweather/first_days}°
+
+
+${font Arial:size=8}${execpi 600 sed -n '5p' $HOME/Programs/conky/1_accuweather/first_days|cut -c1-17}${goto 110}${execpi 600 sed -n '10p' $HOME/Programs/conky/1_accuweather/first_days|cut -c1-17}${goto 220}${execpi 600 sed -n '15p' $HOME/Programs/conky/1_accuweather/first_days|cut -c1-17}
+${execpi 600 sed -n '5p' $HOME/Programs/conky/1_accuweather/first_days|cut -c18-34}${goto 110}${execpi 600 sed -n '10p' $HOME/Programs/conky/1_accuweather/first_days|cut -c18-34}${goto 220}${execpi 600 sed -n '15p' $HOME/Programs/conky/1_accuweather/first_days|cut -c18-34}
+${hr 1}
+${color5}${execpi 600 sed -n '16p' $HOME/Programs/conky/1_accuweather/first_days}${goto 90}${execpi 600 sed -n '21p' $HOME/Programs/conky/1_accuweather/first_days}${goto 165}${execpi 600 sed -n '1p' $HOME/Programs/conky/1_accuweather/last_days}${goto 245}${execpi 600 sed -n '6p' $HOME/Programs/conky/1_accuweather/last_days}$color${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_4.png -p 0,400 -s 45x45}${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_5.png -p 75,400 -s 45x45}${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_6.png -p 155,400 -s 45x45}${image $HOME/Programs/conky/1_accuweather/forecast_2016/forecast_7.png -p 235,400 -s 45x45}
+
+${goto 65}${execpi 600 sed -n '18p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 142}${execpi 600 sed -n '23p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 219}${execpi 600 sed -n '3p' $HOME/Programs/conky/1_accuweather/last_days}°${goto 295}${execpi 600 sed -n '8p' $HOME/Programs/conky/1_accuweather/last_days}°
+${goto 65}/${execpi 600 sed -n '19p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 142}/${execpi 600 sed -n '24p' $HOME/Programs/conky/1_accuweather/first_days}°${goto 219}/${execpi 600 sed -n '4p' $HOME/Programs/conky/1_accuweather/last_days}°${goto 295}/${execpi 600 sed -n '9p' $HOME/Programs/conky/1_accuweather/last_days}°
+
+
+
+]];
