@@ -13,14 +13,12 @@ The display is half english and french for some elements and adapted to my 1600*
 
 <img src="img/example.png">
 
-## Using it
-----
+## Usage
 Just launch the *start.sh* located in the conky folder. Don't forget to `chmod +x start.sh` before you execute it.
 
 All rc files available are not executed in my config but you can customize it. See the repository mentioned above.
 
 ## Repository folders
-----
   - **img** folder contains images to display in .md
   - **conky** folder contains all config rc files to display what you can see in the example above :
     - *calrc* for calendar
@@ -32,12 +30,10 @@ All rc files available are not executed in my config but you can customize it. S
     - *networkrc* for network monitoring
     - **1_accuweather folder** for weather display, see part below for more info
 
-## Adapting the network to your install
-----
+## Adapting the network display to your install
 I use this configuration on Ubuntu 16.04 and my configuration automatically adapts to my two network interfaces : *wlp3s0* for wifi and *enp0s25* for ethernet cable. Go to the **networkrc** file and change these interfaces with your system's.
 
-## Adapting the weather to your install
-----
+## Adapting the weather display to your install
 I use the *.conkyrc_1_images_wind_2016* file for my configuration, but there are a lot others you can have fun with. I got this from the accuweather scripts : [see this link](https://forums.bunsenlabs.org/viewtopic.php?id=189)
 
 If you want to use my configuration as it is, you have to change two files :
